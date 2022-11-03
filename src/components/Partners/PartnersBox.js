@@ -116,6 +116,22 @@ function PartnersBox(props) {
             }
 
             if (
+              partnersIndex === index + 9 ||
+              index - partnersIndex === partnersLength - 9
+            ) {
+              transform = "translateX(900%)";
+              opacity = 0;
+            }
+
+            if (
+              partnersIndex === index + 10 ||
+              index - partnersIndex === partnersLength - 10
+            ) {
+              transform = "translateX(1000%)";
+              opacity = 0;
+            }
+
+            if (
               partnersIndex === index - 1 ||
               (index === 0 && partnersIndex === partnersLength - 1)
             ) {

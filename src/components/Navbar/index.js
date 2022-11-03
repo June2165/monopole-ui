@@ -11,6 +11,7 @@ import {
   MenuList,
   MenuItem,
   MenuButton,
+  Skeleton,
   Icon,
   Text,
   Link,
@@ -187,21 +188,31 @@ export default function Navbar() {
               </ButtonGroup>
             </Flex>
           </Flex>
-          <Flex alignItems="center" border="2px solid" borderRadius="50px">
-            <Tooltip hasArrow label="Coming soon" shouldWrapChildren mt="3">
-              {/*<Link href={"https://app.monopole.network"} isExternal>*/}
-              <Button
-                borderRadius="50px"
-                background="transparent"
-                _hover={{ background: "transparent" }}
-                _active={{ background: "transparent" }}
-                disabled="true"
-              >
-                <Text fontSize="14px" fontWeight="700" mt="3px">
-                  Launch App
-                </Text>
-              </Button>
-              {/*</Link>*/}
+          <Flex
+            alignItems="center"
+            //border="2px solid #03CB88"
+            borderRadius="50px"
+            h="44px"
+            w="280px"
+          >
+            <Tooltip
+              hasArrow
+              label="This is pre beta app"
+              shouldWrapChildren
+              mt="3"
+            >
+              <Link href={"https://app.monopole.network"} isExternal>
+                <Button
+                  borderRadius="50px"
+                  background="transparent"
+                  _hover={{ background: "transparent" }}
+                  _active={{ background: "transparent" }}
+                >
+                  <Text fontSize="14px" fontWeight="700" mt="3px">
+                    Launch Alpha App
+                  </Text>
+                </Button>
+              </Link>
             </Tooltip>
             <Menu>
               <MenuButton display={{ sm: "none", md: "block", lg: "block" }}>
@@ -217,7 +228,7 @@ export default function Navbar() {
                 borderRadius="20px"
                 alignItems="center"
                 bg={menuColor}
-                border="2px solid"
+                border="0px"
               >
                 <Flex flexDirection="column">
                   {Object.keys(Social).map((id) => {
@@ -225,7 +236,7 @@ export default function Navbar() {
                       <Link href={Social[id].link} isExternal>
                         <MenuItem
                           borderRadius="20px"
-                          _hover={{ border: "2px solid" }}
+                          _hover={{ border: "0px" }}
                         >
                           <Icon
                             h="18px"
@@ -250,6 +261,26 @@ export default function Navbar() {
             >
               {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
             </Button>
+            <Skeleton
+              //opacity="1"
+              borderRadius="50px"
+              position="absolute"
+              w="inherit"
+              h="inherit"
+              zIndex="-2"
+              startColor="#03CB88"
+              endColor="#8235FF"
+            />
+            <Flex
+              //opacity="1"
+              borderRadius="50px"
+              position="absolute"
+              w="274px"
+              ml="3px"
+              h="39px"
+              zIndex="-1"
+              bg={menuColor}
+            />
           </Flex>
         </Flex>
       </Box>

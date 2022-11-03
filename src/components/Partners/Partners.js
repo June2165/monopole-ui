@@ -5,45 +5,55 @@ import immorentier from "../../assets/img/brands/immorentier.png";
 import raduga from "../../assets/img/brands/raduga.png";
 import sayada from "../../assets/img/brands/sayada.png";
 import serieux from "../../assets/img/brands/serieux.png";
-import specto from "../../assets/img/brands/specto.png";
 import ennedi from "../../assets/img/brands/ennedis.png";
+import aquaverse from "../../assets/img/brands/aquaverse.png";
+import cryptoclimate from "../../assets/img/brands/crypto-climate.png";
+import stim from "../../assets/img/brands/stim.png";
 
 const Partners = {
   0: {
+    name: "Crypto Climate",
+    img: cryptoclimate,
+  },
+  1: {
+    name: "Aquaverse",
+    img: aquaverse,
+  },
+  2: {
     name: "Vecino",
     img: vecino,
   },
-  1: {
+  3: {
     name: "Advanced Automotive",
     img: automotive,
   },
-  2: {
+  4: {
     name: "Cuatrimoteando",
     img: cuatrimoteando,
   },
-  3: {
+  5: {
     name: "Immorentier",
     img: immorentier,
   },
-  4: {
+  6: {
     name: "Raduga Film LLC",
     img: raduga,
   },
-  5: {
+  7: {
     name: "Sayada",
     img: sayada,
   },
-  6: {
+  8: {
     name: "Sérieux",
     img: serieux,
   },
-  7: {
-    name: "Specto Media",
-    img: specto,
-  },
-  8: {
+  9: {
     name: "Ennedi",
     img: ennedi,
+  },
+  10: {
+    name: "Stim",
+    img: stim,
   },
 };
 

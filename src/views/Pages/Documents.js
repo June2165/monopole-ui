@@ -23,32 +23,50 @@ function Documents() {
   //const color = useColorModeValue("white", "dark");
 
   return (
-    <Flex justifyContent="center" w="100%" h="100%" align="center">
+    <Flex justifyContent="center" w="100%" mt="88px" mb="500px" align="center" gap="25px">
       <Link
         href={
-          "https://github.com/Monopole-network/monopole-ui/raw/main/src/assets/pdf/litepaper.pdf"
+          "https://www.canva.com/design/DAFDVSW3u-E/YW5sORfEBsp5uDiCQijpcQ/view?utm_content=DAFDVSW3u-E&utm_campaign=designshare&utm_medium=link&utm_source=viewer"
         }
-        h="600px"
-        w="100%"
         isExternal
         target="_blank"
         _focus={{ boxShadow: "none" }}
       >
-        <Flex justifyContent="center" w="100%" h="100%" align="center">
-          <Button
-            borderRadius="16px"
-            width="200px"
-            minWidth="160px"
-            height="64px"
-            background="#8235FF"
-            color="white"
-            _active={{
-              background: "#03CB88",
-            }}
-          >
-            Download our Lite Paper
-          </Button>
-        </Flex>
+        <Button
+          borderRadius="16px"
+          width="200px"
+          minWidth="160px"
+          height="64px"
+          background="#8235FF"
+          color="white"
+          _active={{
+            background: "#03CB88",
+          }}
+        >
+          View our Lite Paper
+        </Button>
+      </Link>
+      <Link
+        href={
+          "https://www.canva.com/design/DAFHw1xIngo/2lHwJIuOlLPHEQ0oDdD5bQ/view?utm_content=DAFHw1xIngo&utm_campaign=designshare&utm_medium=link&utm_source=viewer"
+        }
+        isExternal
+        target="_blank"
+        _focus={{ boxShadow: "none" }}
+      >
+        <Button
+          borderRadius="16px"
+          width="200px"
+          minWidth="160px"
+          height="64px"
+          background="#8235FF"
+          color="white"
+          _active={{
+            background: "#03CB88",
+          }}
+        >
+          View our Pitch Deck
+        </Button>
       </Link>
 
       {/*<Worker

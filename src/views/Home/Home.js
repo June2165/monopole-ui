@@ -34,7 +34,7 @@ import { Chrono } from "react-chrono";
 import { motion } from "framer-motion";
 
 import { Social } from "../../components/Social";
-import { Team, Advisors, Partners } from "../../components/Team";
+import { Team, Advisors } from "../../components/Team";
 import { Faq } from "../../components/Faq";
 import { Roadmap } from "../../components/Roadmap";
 import { Newsletter } from "../../components/Newsletter";
@@ -117,7 +117,10 @@ function Home(props) {
 
   const navigate = useNavigate();
   const menuColor = useColorModeValue("white", "#000126");
-  const partnersColor = useColorModeValue("#000126", "transaprent");
+  const partnersColor = useColorModeValue(
+    "linear-gradient(360deg, rgba(3,203,136,1) 0%, rgba(3,203,136,1) 100%)",
+    "linear-gradient(360deg, rgba(3,203,136,1) 0%, rgba(3,203,136,1) 100%)"
+  );
   /*
   const [scrolling, setScrolling] = useState(false);
   const [scrollTop, setScrollTop] = useState(0);
@@ -175,10 +178,10 @@ function Home(props) {
           </Text>
           <Flex py="20px" flexDirection="column">
             <Text fontSize={{ sm: "15px", md: "18px" }}>
-              The first sustainable investment DAO.
+              We are the 1st sustainable Startup Studio
             </Text>
             <Text fontSize={{ sm: "15px", md: "18px" }}>
-              Invest on 11+ already active diversifications.
+              We tokenise real projects for real impact
             </Text>
           </Flex>
           <Flex
@@ -191,22 +194,39 @@ function Home(props) {
             gap={{ sm: "10px", md: "10px", lg: "10px" }}
           >
             <Flex w="100%">
-              <Button
-                borderRadius="16px"
+              <Link
+                href={"https://app.monopole.network"}
                 width="100%"
-                minWidth="160px"
                 height="64px"
-                background="#8235FF"
+                minWidth="160px"
                 color="white"
+                background="#03CB88"
+                borderRadius="16px"
+                isExternal
                 _active={{
                   background: "#03CB88",
                 }}
-                onClick={() => {
-                  navigate("/documents");
+                _hover={{
+                  background: "#03CB88",
                 }}
+                _focus={{ boxShadow: "none", background: "#03CB88" }}
               >
-                Discover our project
-              </Button>
+                <Button
+                  borderRadius="16px"
+                  background="#03CB88"
+                  width="100%"
+                  height="100%"
+                  _active={{
+                    background: "#03CB88",
+                  }}
+                  _hover={{
+                    background: "#03CB88",
+                  }}
+                  _focus={{ boxShadow: "none", background: "#03CB88" }}
+                >
+                  Discover our project
+                </Button>
+              </Link>
             </Flex>
             <Flex w="100%">
               <Menu>
@@ -234,7 +254,7 @@ function Home(props) {
                   borderRadius="20px"
                   alignItems="center"
                   bg={menuColor}
-                  border="2px solid"
+                  border="0px"
                 >
                   <Flex flexDirection="column">
                     {Object.keys(Social).map((id) => {
@@ -242,7 +262,7 @@ function Home(props) {
                         <Link href={Social[id].link} isExternal>
                           <MenuItem
                             borderRadius="20px"
-                            _hover={{ border: "2px solid" }}
+                            _hover={{ border: "0px" }}
                           >
                             <Icon
                               h="18px"
@@ -318,12 +338,18 @@ function Home(props) {
         width="100%"
         height="108px"
         mt="125px"
-        zIndex="1"
-        backdropFilter="blur(1px)"
-        //borderTop="4px solid #03CB88"
-        //borderBottom="4px solid #03CB88"
+        zIndex="0"
+        //backdropFilter="blur(1px)"
+        borderTop="4px solid #03CB88"
+        borderBottom="4px solid #03CB88"
       />
-      <Flex height="66px" mt="-77px" width="100%" background={partnersColor} />
+      <Flex
+        height="66px"
+        mt="-77px"
+        width="100%"
+        zIndex="10"
+        background={partnersColor}
+      />
       <Flex
         id="WhatIsMonopole"
         flexDirection="column"
@@ -354,8 +380,8 @@ function Home(props) {
           zIndex="1"
           lineHeight={{ sm: "30px", md: "40px", lg: "50px" }}
         >
-          Community asset diversification platform with socially responsible and
-          profitable values
+          Monopole creates Impact to help projects, investors and the
+          environmental challenges of tomorrow
         </Text>
         <Flex flexDirection="column" width="100%">
           <Grid
@@ -384,12 +410,11 @@ function Home(props) {
                       fontWeight="700"
                       fontFamily="Montserrat"
                     >
-                      Diversify
+                      Studio
                     </Text>
                     <Text lineHeight="24px" fontSize="16px" fontWeight="400">
-                      Invest in projects of different types like real estate,
-                      start-ups or movies, and 11+ more. All this while
-                      remaining on blockchain ecosystem.
+                      Take part in your favourite project and receive related
+                      exclusives. Real Estate and Entertainment focus worldwide
                     </Text>
                   </Flex>
                 </Flex>
@@ -417,7 +442,7 @@ function Home(props) {
                       fontWeight="700"
                       fontFamily="Montserrat"
                     >
-                      DAO
+                      DAO / 1st S-DAI
                     </Text>
                     <Text lineHeight="24px" fontSize="16px" fontWeight="400">
                       Keep control of your investments by voting for the
@@ -454,8 +479,8 @@ function Home(props) {
                       International
                     </Text>
                     <Text lineHeight="24px" fontSize="16px" fontWeight="400">
-                      Investments will be in several countries, you can invest
-                      in a property on the other side of the world and expose
+                      Projects will be in several countries, you can invest in a
+                      property on the other side of the world and expose
                       yourself to different markets.
                     </Text>
                   </Flex>
@@ -487,9 +512,8 @@ function Home(props) {
                       Proof of Property
                     </Text>
                     <Text lineHeight="24px" fontSize="16px" fontWeight="400">
-                      Investments will be backed by proof in blockchain like
-                      token or nft and you will be the sole owner of your
-                      investment.
+                      Projects will be backed by proof in blockchain like token
+                      or nft and you will be the sole owner of your investment.
                     </Text>
                   </Flex>
                 </Flex>
@@ -537,7 +561,7 @@ function Home(props) {
           <Flex mb="50px">
             <Flex direction="column" align="center" w="100%">
               <Flex direction="column" width="262px" height="350px">
-                <Simplicity w="64px" h="64px" mb="30px" />
+                <Ethics w="64px" h="64px" mb="26px" />
                 <Flex direction="column">
                   <Text
                     mb="20px"
@@ -546,12 +570,12 @@ function Home(props) {
                     fontWeight="700"
                     fontFamily="Montserrat"
                   >
-                    Simplicity
+                    Ethics & Responsability
                   </Text>
                   <Text lineHeight="24px" fontSize="16px" fontWeight="400">
-                    As we are a complete ecosystem and not an isolated project,
-                    we work in synergy to facilitate your investments. A single
-                    contact for everything! In 3 clicks and that's it.
+                    We are on an ecologically neutral blockchain for a reduced
+                    carbon footprint of investments. Monopole donates 0.5% of
+                    its earnings to a foundation dedicated to decarbonization.
                   </Text>
                 </Flex>
               </Flex>
@@ -564,7 +588,7 @@ function Home(props) {
           <Flex mb="50px">
             <Flex direction="column" align="center" w="100%">
               <Flex direction="column" width="262px" height="350px">
-                <Support w="64px" h="64px" mb="26px" />
+                <Security w="64px" h="64px" mb="30px" />
                 <Flex direction="column">
                   <Text
                     mb="20px"
@@ -573,13 +597,12 @@ function Home(props) {
                     fontWeight="700"
                     fontFamily="Montserrat"
                   >
-                    Support
+                    Security
                   </Text>
                   <Text lineHeight="24px" fontSize="16px" fontWeight="400">
-                    We have a recognized contract as a business contributor.
-                    Everything is not dematerialized, you are surrounded to
-                    better invest and better consume by people whose objective
-                    is to help you choose and optimize your investments!
+                    Security is optimised at all levels of the project. Combined
+                    with decentralisation to give you full transparency and
+                    control over your choices.
                   </Text>
                 </Flex>
               </Flex>
@@ -604,9 +627,9 @@ function Home(props) {
                     Legal conformity
                   </Text>
                   <Text lineHeight="24px" fontSize="16px" fontWeight="400">
-                    You can invest anywhere in the world without having to
-                    travel and in all legality. Monopole allows international,
-                    filtered, secure and easy investments.
+                    You can support any sustainable project, anywhere in the
+                    world and without moving. Monopole takes care of setting up
+                    in the most favourable areas.
                   </Text>
                 </Flex>
               </Flex>
@@ -619,7 +642,7 @@ function Home(props) {
           <Flex mb="50px">
             <Flex direction="column" align="center" w="100%">
               <Flex direction="column" width="262px" height="350px">
-                <Security w="64px" h="64px" mb="30px" />
+                <Support w="64px" h="64px" mb="26px" />
                 <Flex direction="column">
                   <Text
                     mb="20px"
@@ -628,11 +651,13 @@ function Home(props) {
                     fontWeight="700"
                     fontFamily="Montserrat"
                   >
-                    Security
+                    Support
                   </Text>
                   <Text lineHeight="24px" fontSize="16px" fontWeight="400">
-                    Monopole ensures that the proposed investments are viable.
-                    The entire ecosystem will be audited by external companies.
+                    Mixing human innovation and AI is also for your follow-up!
+                    You can choose to be accompanied by our community-based
+                    educational training or by our automated systems.
+                    Personalized support is always at your disposal
                   </Text>
                 </Flex>
               </Flex>
@@ -645,7 +670,7 @@ function Home(props) {
           <Flex mb="50px">
             <Flex direction="column" align="center" w="100%">
               <Flex direction="column" width="262px" height="350px">
-                <Ethics w="64px" h="64px" mb="26px" />
+                <Simplicity w="64px" h="64px" mb="30px" />
                 <Flex direction="column">
                   <Text
                     mb="20px"
@@ -654,16 +679,17 @@ function Home(props) {
                     fontWeight="700"
                     fontFamily="Montserrat"
                   >
-                    Ethics & Responsability
+                    Simplicity
                   </Text>
                   <Text lineHeight="24px" fontSize="16px" fontWeight="400">
-                    We are on an ecologically neutral blockchain for a reduced
-                    carbon footprint of investments. Monopole donates 0.5% of
-                    its earnings to a foundation dedicated to decarbonization.
+                    In one click, have all the transparency and ease of access
+                    of internationally widespread projects. Gamified or
+                    responsive, you choose your version of Monopole
                   </Text>
                 </Flex>
               </Flex>
             </Flex>
+
             <Divider
               orientation="vertical"
               display={{ sm: "none", md: "block", lg: "block", xl: "block" }}
@@ -737,7 +763,7 @@ function Home(props) {
             Here is our full documents that help you to understand deeply about
             us and our project
           </Text>
-          <Link
+          {/*<Link
             href={
               "https://github.com/Monopole-network/monopole-ui/raw/main/src/assets/pdf/litepaper.pdf"
             }
@@ -747,26 +773,26 @@ function Home(props) {
             isExternal
             target="_blank"
             _focus={{ boxShadow: "none" }}
+          >*/}
+          <Button
+            mt="32px"
+            borderRadius="16px"
+            width="20%"
+            height="64px"
+            background="#03CB88"
+            color="white"
+            minWidth="160px"
+            _active={{
+              background: "#8235FF",
+            }}
+            zIndex="1"
+            onClick={() => {
+              navigate("/documents");
+            }}
           >
-            <Button
-              mt="32px"
-              borderRadius="16px"
-              width="20%"
-              height="64px"
-              background="#03CB88"
-              color="white"
-              minWidth="160px"
-              _active={{
-                background: "#8235FF",
-              }}
-              zIndex="1"
-              onClick={() => {
-                //  navigate("/documents");
-              }}
-            >
-              Documents
-            </Button>
-          </Link>
+            Documents
+          </Button>
+          {/*</Link>*/}
         </Flex>
         <Flex
           mt="-100px"
@@ -879,10 +905,9 @@ function Home(props) {
             fontWeight="400"
             fontFamily="Montserrat"
           >
-            Vote and own your investments, choose or make a proposal on the DAO
-            to increase the profitability of your investment. The benefits of a
-            human and community experience on the selection of the
-            diversification and the support
+            You can tokenise your project, we tokenise your idea. Mixing support
+            from our teams and strategic development with our Exclusive Investor
+            Club, consolidate your project in the responsible startup studio
           </Text>
         </Flex>
       </SimpleGrid>
@@ -909,7 +934,7 @@ function Home(props) {
             bgClip="text"
             width="200px"
           >
-            Verified investments
+            Real Projects
           </Text>
           <Text
             mt="4px"
@@ -918,7 +943,7 @@ function Home(props) {
             fontFamily="Montserrat"
             lineHeight={{ sm: "30px", md: "40px", lg: "50px" }}
           >
-            Enjoy verified investments and diversify
+            Enjoy and choose your favorite projects
           </Text>
           <Text
             mt="16px"
@@ -926,9 +951,11 @@ function Home(props) {
             fontWeight="400"
             fontFamily="Montserrat"
           >
-            Whether you choose the NFT or Token strategy, grow your investment.
-            Secure your assets with multi-strategy, choose between Token and
-            NFT. Buy, Swap, Sell or Hodl easly
+            Make your voice heard in a club of investors creating impact on the
+            projects of tomorrow. Through the S-DAI, in addition to selecting
+            your project and getting exclusive benefits, you will also be able
+            to build the strategy, have all the visibility and proof of
+            achievement in one place. Monopole, your first choice.
           </Text>
         </Flex>
         <Flex zIndex="0" pt={{ sm: "50px", md: "50px", lg: "50px", xl: "0px" }}>
@@ -973,7 +1000,7 @@ function Home(props) {
             fontFamily="Montserrat"
             lineHeight={{ sm: "30px", md: "40px", lg: "50px" }}
           >
-            Access everything you need, pay on Monopole
+            Join our Impact Investor Club
           </Text>
           <Text
             mt="16px"
@@ -981,7 +1008,9 @@ function Home(props) {
             fontWeight="400"
             fontFamily="Montserrat"
           >
-            Use your cryptocurrencies in daily life, enjoy our premium services
+            $MNPL allows you to select your project, pay platform fees and
+            access exclusive benefits while using your cryptocurrency in real
+            life.
           </Text>
         </Flex>
       </SimpleGrid>
@@ -1383,7 +1412,7 @@ function Home(props) {
               );
             })}
           </Grid>
-          <Text
+          {/*<Text
             lineHeight={{ sm: "30px", md: "40px", lg: "50px" }}
             fontSize={{ sm: "34px", md: "44px" }}
             fontWeight="700"
@@ -1476,7 +1505,7 @@ function Home(props) {
                 </Box>
               );
             })}
-          </Grid>
+          </Grid>*/}
         </Flex>
       </Flex>
       <SimpleGrid

@@ -1,22 +1,30 @@
 const Roadmap = [
   {
-    title: "Q1",
+    title: "🎩 H1 2022 🎩",
     text:
-      "Genesis of Monopole with the first partners and start of development, private fundraiser",
+      "Private Sale, Genese",
   },
   {
-    title: "Q2",
+    title: "🎩 H2 2022 🎩",
     text:
-      "Launchpad and ico, launch of the first investment pool and the app, major marketing campaign",
+      "Beta App, Launch of LatAm, ICO",
   },
   {
-    title: "Q3",
+    title: "🎩 H1 2023 🎩",
     text:
-      "Token listing, start of dao,launch of concierge services for investors, first burn and buyback",
+      "DAO & s-DAI launch, R&D Dept, First Foundation Project",
   },
   {
-    title: "Q4",
-    text: "DeFi service launch for investment",
+    title: "🎩 H2 2023 🎩",
+    text: "First Energy Dpt in LatAm, International Concierge, Second Impact Audit",
+  },
+  {
+    title: "🎩 H1 2024 🎩",
+    text: "First Events of Culture Dpt, 2+ other Blockchain cross-functional, Biometric security plugged",
+  },
+  {
+    title: "🎩 H2 2024 🎩",
+    text: "First Economic Label Event by Monopole, 1 other Blockchain cross-functional, Public Bridges",
   },
 ];
 
