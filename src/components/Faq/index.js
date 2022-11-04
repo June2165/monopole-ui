@@ -1,55 +1,61 @@
 const Faq = {
   0: {
-    category: "General",
+    category: "General & $MNPL",
     questions: [
       {
-        question: "Access the MNPL platform?",
-        response: "https://monopole.network",
+        question: "Where can I follow the Monopole's news?",
+        response: "https://blog.monopole.network",
       },
       {
-        question: "Stacking For MNPL Holders?",
-        response: "Stacking implemented at ICO. Unrestricted profitability",
+        question: "What is Monopole Ecosystem?",
+        response: "Monopole is a platform that makes sustainable projects visible, supporting projects through a studio. Each project will have the possibility to be labelled Proof of Impact",
       },
       {
-        question: "Based on which Blockchain(s)?",
+        question: "Based on which Blockchains?",
         response:
-          "The particularity and uniqueness of the MNPL project is that it is on several Blockchains: Ternoa, Avalanche, Polygon, Binance Smart Chain, Ethereum",
+          "The particularity of the Monopole project is that it is on several Blockchains: Elrond, Avalanche, Polygon, Binance Smart Chain, Ethereum",
       },
       {
-        question: "How can I spend my MNPL tokens?",
+        question: "Where is the headquarters (HQ) of Monopole?",
         response:
-          "Invest: Your diversification and its returns at a glance. Film, independent media, tokenisation, NFT incubator, and many more. Over 4 verified and internationally renowned partners. Finance: Find your insurance, payment, DEX, bridge, lending and borrowing services right here. Conciergerie: Your daily life and desires offered in cryptocurrency around the world. Travel, car, activities, administrative management.",
+          "Actually, we are on Lisbon. 12.2022: foundation in Switzerland and HQ in LatAm. ",
       },
+      
+      {
+        question: "Why Monopole?",
+        response:
+          "Monopole is the only place a maximum decentralise where you have all the view on your portfolio backed on real assets but also Web3 and while making visibility to sustainable finance ",
+       },
     ],
   },
   1: {
-    category: "MNPL Token",
+    category: "Sustainable Finance",
     questions: [
       {
-        question: "How to buy the MNPL token?",
-        response: "By participing at the ICO",
+        question: "What is sustainable finance?",
+        response: "Finance is the set of mechanisms that provide the economy with the capital it needs to function. It plays a key role in the competitiveness and wealth of a country because its objectives are to ensure the optimal use of resources and thus to improve the well-being of all.", "But achieving the highest standard of living can only be achieved if the environment and natural resources are taken into account, Financing a socially just ecological transition is therefore a major challenge for the future of our societies", "In order to support the real economy and long-term projects, sustainable finance favours financial operations that take into account non-financial criteria called ESG criteria: environmental, social and governance." ,"These criteria include analysis of the impacts of companies activities in terms of carbon emissions, biodiversity protection, waste management, etc.; societal impacts; and the set of rules that govern how businesses are controlled and run.",
       },
       {
-        question: "What is the total supply of MNPL?",
-        response: "The total supply of MNPL is: 1.000.000.000",
+        question: "What studies have helped you build Monopole’s geopolitical and financial strategies?",
+        response: "We rely on studies by McKinsey, Bain, Chen Chen and Milton. But also on studies from European Nordic countries. Our entire bibliography will be available on the White Paper",
       },
       {
-        question: "What is the tokenomics of MNPL?",
+        question: "",
         response:
-          "PS1: 4%, PS2: 8%, PS3: 14%, ICO: 3%, Airdrop: 2%, Liquidity providing: 13%, Founders: 13%, Advisors & Rewards: 3%, Development: 10%, Foundation: 30%",
+          "",
       },
     ],
   },
   2: {
-    category: "Pre ICO & ICO",
+    category: "Proof of Impact Label",
     questions: [
       {
-        question: "What is the date of the First ICO?",
-        response: "20 March 2022",
+        question: "What is the Proof of Impact?",
+        response: "",
       },
       {
-        question: "What is the date of the Second ICO?",
-        response: "5 April 2022",
+        question: "",
+        response: "",
       },
     ],
   },
