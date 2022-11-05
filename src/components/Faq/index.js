@@ -20,13 +20,12 @@ const Faq = {
         response:
           "Actually, we are on Lisbon. 12.2022: foundation in Switzerland and HQ in LatAm. ",
       },
-      
       {
         question: "Why Monopole?",
         response:
           "Monopole is the only place a maximum decentralise where you have all the view on your portfolio backed on real assets but also Web3 and while making visibility to sustainable finance ",
-       },
-    ],
+       }
+    ]
   },
   1: {
     category: "Sustainable Finance",
@@ -43,8 +42,8 @@ const Faq = {
         question: "",
         response:
           "",
-      },
-    ],
+      }
+    ]
   },
   2: {
     category: "Proof of Impact Label",
@@ -56,9 +55,9 @@ const Faq = {
       {
         question: "",
         response: "",
-      },
-    ],
-  },
+      }
+    ]
+  }
 };
 
 export { Faq };
