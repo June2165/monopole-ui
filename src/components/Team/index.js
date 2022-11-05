@@ -149,7 +149,7 @@ const Team = {
 
 const Advisors = {
   0: {
-    name: "Margaux Frisque",
+    name: "Margaux F.",
     img: margaux,
     rank: "Head of Legal",
     link: "https://dnapartners.fr/",
